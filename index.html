@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>
+			Simple code editor
+		</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+		<link href="css/editor/prism.css" rel="stylesheet" />
+		<link href="css/editor/custom.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="w-75 mx-auto mt-4 mb-5 rounded editor-container d-flex">
+			<pre class="lang-js line-numbers"><code class="editor" data-gramm="false" id="editor"></code></pre>
+			<textarea class="editor-area line-numbers" name="code" id="editor-area" spellcheck="false"></textarea>
+		</div>
+		<script src="js/libs/jquery.slim.min.js"></script>
+		<script src="js/libs/prism.js"></script>
+		<script src="js/editor.js"></script>
+	</body>
+</html>

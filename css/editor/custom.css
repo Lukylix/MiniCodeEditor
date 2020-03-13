@@ -1,0 +1,44 @@
+
+.editor,
+.editor-container pre,
+.editor-area {
+	overflow: hidden;
+	white-space: pre-wrap;
+	border-radius: 10px;
+	width: 100%;
+	min-height: 700px;
+}
+.editor-container {
+	position: relative;
+}
+
+.editor-container pre,
+.editor-area {
+	position: absolute;
+}
+
+.editor-area {
+
+	text-decoration: none;
+	text-shadow: none;
+	background: none;
+	top: 0px;
+	left: 0px;
+	color: transparent;
+	caret-color: rgba(255, 255, 255, 1) !important;
+}
+.editor-area.line-numbers {
+	padding-left: 3.8em;
+}
+
+.editor-container pre {
+	top: 1px;
+	left: 1px;
+	border: none;
+	margin: 0;
+	padding: 0.15em 0.2em 0.05em;
+}
+
+.editor-area:focus {
+	outline: none;
+}
