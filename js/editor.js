@@ -7,9 +7,19 @@ $("#editor-area").on("keydown change input", null, function(e) {
 		});
 		this.selectionEnd = s + 1;
 	}
-  $("#editor").html($(this).val() || "");
-  $(this).each(function(index, elem) {
-		elem.style.height = $('#editor').parent().height()+ 5 + "px";
+	$("#editor").html(
+		$(this)
+			.val()
+			.replace(/&/g, "&amp;")
+			.replace(/</g, "&lt;") || ""
+	);
+	$(this).each(function(index, elem) {
+		elem.style.height =
+			$("#editor")
+				.parent()
+				.height() +
+			5 +
+			"px";
 	});
 	Prism.highlightElement($("#editor")[0]);
 });
